@@ -1,0 +1,35 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">	
+
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">B@IT</a>
+        <div class="nav-links">
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">A propos de nous</a></li>
+                <li><a href="#">Contactez-nous</a></li>
+                <li><a href="#">Creer un compte</a></li>
+                <li><a href="#">se connectez</a></li>
+            </ul>
+        </div>
+        <img style="width: 100px;height: 100px;" src="static/css/menu.png" alt="menu hamburger" class="menu-hamburger">
+    </nav>
+    <header></header>
+    
+</body>
+<script>
+    const menuhamburger =document.querySelector(".menu-hamburger")
+    const navlinks=document.querySelector(".nav-links")
+    menuhamburger.addEventListener('click',()=>{navlinks.classList.toggle('mobile-menu')})
+</script>
+</html>

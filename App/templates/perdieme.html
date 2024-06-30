@@ -1,0 +1,27 @@
+
+<html>
+<head>
+    <title>Liste des projets</title>
+</head>
+<body>
+    <h1>Liste des projets</h1>
+    <a href="{% url 'ajoutmateriel' %}">Ajouter un materiel</a>
+    <ul>
+        {% for mat in materiels %}
+        <li>
+            {{ mat.projet.nom_projet}}
+            {{ mat.nom_materiel}} 
+            
+            {{ mat.type_materiel}}
+            {{ mat.quantite_materiel}}
+            {{ mat.qualite}}
+            {{mat.date_d_enregistrement}}
+          
+            <a href="#">Modifier</a>
+            <a href="#">Supprimer</a>
+           
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
